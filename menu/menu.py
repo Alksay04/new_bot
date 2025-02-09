@@ -1,7 +1,7 @@
 class Meal:
     def __init__(self, price: int, 
                  ingredients: list[str], 
-                 name: str, description: str):
+                 name: str, description: str, id):
         self.price = price
         self.ingredients = ingredients
         self.name = name
@@ -20,12 +20,20 @@ class MealContainer:
     def __init__(self, meals: list[Meal]):
         self.meals = meals
 
+
+
     def write_to_file(self):
         f = open('meals.txt', 'w+', encoding='utf-8')
         f.write('Блюда:\n')
         for meal in self.meals:
             f.write(str(meal))
         f.close()
+
+def get_meal_by_id():
+    
+
+def get_all_meal_names(self):
+    return(meal.name for meal in self.meals)
 
 kurica = Meal(price=4000, 
               ingredients=['просроченая курица'],
